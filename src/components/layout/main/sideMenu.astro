@@ -1,0 +1,83 @@
+---
+    const menuItems: { text: string, url: string, icon: string}[] = [
+        {
+            text: "Blog Home",
+            url: "/",
+            icon: "fa-solid fa-house"
+        },
+        {
+            text: "Side Menu",
+            url: "/",
+            icon: "fa-solid fa-house"
+        },
+        {
+            text: "Side Menu",
+            url: "/",
+            icon: "fa-solid fa-house"
+        }
+    ]
+
+    const socialMediaItems: { icon: string, url: string }[] = [
+        {
+            icon: "fa-brands fa-facebook",
+            url: "/"
+        },
+        {
+            icon: "fa-brands fa-facebook",
+            url: "/"
+        },
+        {
+            icon: "fa-brands fa-facebook",
+            url: "/"
+        },
+        {
+            icon: "fa-brands fa-facebook",
+            url: "/"
+        },
+    ]
+---
+
+<aside class="bg-rose-500 w-82 min-h-full flex flex-col items-center">
+    <h1 
+        class="
+        bg-rose-600 w-32 h-32 mt-22
+        rounded-1 flex flex-col 
+        text-xl font-bold text-sky-50
+        items-center justify-center">Side Menu</h1>
+
+    <ul class="mt-12 w-64 flex-1 flex flex-col  gap-4">
+        
+        {
+            menuItems.map( 
+                item => 
+                    <li class="w-full h-15 ">
+                        <a  class="
+                                py-2 w-full bg-white pl-6 mb-4 flex
+                                items-center  relative w-full 
+                                after:absolute after:border-white
+                                after:border-1 after:h-full
+                                after:w-full after:top-2
+                                after:content-DEFAULT after:left-2" 
+                                href={item.url}>
+                                <i class="fa-solid fa-house text-rose-500 mr-4"></i>
+                                {item.text}
+                        </a>
+                    </li>)
+        }
+        
+    </ul>
+
+
+    <ul class="flex items-center justify-center w-full mb-12 gap-4">
+        {
+            socialMediaItems.map( item => 
+                <li class="w-12 h-12 bg-white ">
+                    <a href={item.url} 
+                        class="w-full h-full flex items-center justify-center">
+                        <i class={[item.icon, "text-2xl"].join(" ")}></i> 
+                    </a>
+                </li>)
+        }
+    </ul>
+</aside>
+

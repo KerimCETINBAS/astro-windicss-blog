@@ -1,0 +1,7 @@
+{
+    "windicss.includeLanguages": {
+        "astro": {
+            "type": "html",
+        }
+    }
+}

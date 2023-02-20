@@ -10,9 +10,13 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"astro": "^2.0.14",
 		"@astrojs/mdx": "^0.17.0",
 		"@astrojs/rss": "^2.1.1",
-		"@astrojs/sitemap": "^1.0.1"
+		"@astrojs/sitemap": "^1.0.1",
+		"astro": "^2.0.14"
+	},
+	"devDependencies": {
+		"astro-integration-windicss": "^0.1.0",
+		"less": "^4.1.3"
 	}
 }
