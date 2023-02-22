@@ -1,0 +1,53 @@
+---
+import MainLayout from "@layouts/main.layout.astro";
+import FullPageSection from "@components/pages/full_page_section.astro";
+import MainSection from "@components/pages/main_section.astro";
+import SideSection from "@components/pages/side_section.astro";
+export function getStaticPaths() {
+
+    return [{
+        params: { slug: "1" }
+    }]
+}
+
+const { slug } = Astro.params
+const name = "Single Post of Xtra Blog HTML Template"
+---
+
+
+
+
+<MainLayout>
+
+		<FullPageSection>
+            <div class="w-full h-92 bg-rose-300"></div>
+        </FullPageSection>
+
+        <div class="flex flex-1 mt-12">
+            <MainSection>
+                <h2 class="py-6 text-rose-500 font-semibold text-3xl">
+                    {name}
+                </h2>
+
+                <span class="text-2xl text-gray-400 text-semibold">
+                    June 16, 2020 posted by Admin Nat
+                </span>
+                <article class="text-2xl">
+                     <p class="py-4 mt-4 text-gray-500">
+                     This is a description of the video post. You can also have an image instead of the video. You can free download Xtra Blog Template from TemplateMo website. Phasellus maximus quis est sit amet maximus. Vestibulum vel rutrum lorem, ac sodales augue. Aliquam erat volutpat. Duis lectus orci, blandit in arcu est, elementum tincidunt lectus. Praesent vel justo tempor, varius lacus a, pharetra lacus.
+                   </p>
+
+                    <p class="p-4 text-gray-500">
+                        Duis pretium efficitur nunc. Mauris vehicula nibh nisi. Curabitur gravida neque dignissim, aliquet nulla sed, condimentum nulla. Pellentesque id venenatis quam, id cursus velit. Fusce semper tortor ac metus iaculis varius. Praesent aliquam ex vel lectus ornare tristique. Nunc et eros quis enim feugiat tincidunt et vitae dui.
+                    </p>
+                </article>
+                <span class="flex justify-end text-2xl text-gray-400 pr-6">
+                    Creative . Design . Business
+                </span>
+            </MainSection>
+            <SideSection>
+                123
+            </SideSection>
+        </div>
+        
+</MainLayout>

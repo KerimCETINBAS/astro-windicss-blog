@@ -13,13 +13,17 @@ import Container from "@components/common/container.astro"
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerPolicy="no-referrer" />
     <title>Blog</title>
 </head>
-<body class="w-full min-h-screen flex">
-    <SideMenu />
-    <div class="flex-1 flex flex-col">
-        <Header/>
-        <main class="h-full">
-            <slot/>
-        </main>
-    </div>
+<body class="w-full h-screen flex">
+   <Container>
+      
+        <SideMenu />
+        <div class="flex-1 flex flex-col">
+            <Header/>
+            <h2 class="py-6 text-rose-500 font-semibold text-3xl"></h2>
+            <main class="h-full flex flex-col pl-12">
+                <slot/>
+            </main>
+        </div>
+   </Container>
 </body>
 </html>

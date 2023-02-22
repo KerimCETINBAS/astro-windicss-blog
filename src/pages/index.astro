@@ -1,25 +1,17 @@
 ---
 	import MainLayout from "@layouts/main.layout.astro";
-	import PostCard from "@components/pages/postCard.astro";
-import Container from "@components/common/container.astro";
+	import PostCard from "@components/pages/post_card.astro";
 	
 ---
 
 
 <MainLayout>
-	
-	
-	<Container>
-		<section >
-			<h2 class="py-6">
-				Bloglar
-			</h2>
-			<div class="grid gap-12 grid-cols-3 flex-1 w-full h-full ">
-				<PostCard />
-				<PostCard />
-				<PostCard />
-				<PostCard />
-			</div>
-		</section>
-	</Container>
+		<h2 class="py-6 text-rose-500 font-semibold text-3xl">
+			Bloglar
+		</h2>
+		<div class="grid gap-12 grid-cols-3 flex-1 w-full h-full ">
+			{
+				Array.from(new Array(5), (_)=> <section> <PostCard /> </section>)
+			}
+		</div>
 </MainLayout>
